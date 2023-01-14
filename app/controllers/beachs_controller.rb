@@ -5,7 +5,7 @@ class BeachsController < ApplicationController
   end
 
   def show
-    @beachs = Beachs.find(params[:id])
-    @beachs = Beachs.new
+    @beach = Beach.find(params[:id])
+    @beach = Beach.new
   end
 end
