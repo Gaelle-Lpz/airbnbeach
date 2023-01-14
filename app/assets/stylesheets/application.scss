@@ -10,3 +10,34 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-image: image-url('beachesv2.jpg');
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: darkblue;
+   background-size: cover;
+
+}
+
+h1{
+  float: left;
+  color: darkblue;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px ;
+  text-align: left !important;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  //flex-direction: column;//only vertical
+  align-items: center;//both vertical and horizonal
+  justify-content: center
+
+}
+
+.navbar-nav me-auto {
+background-color: blue;
+
+}
