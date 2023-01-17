@@ -8,5 +8,21 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width:50px;
 }
+
+.nav-link {
+  font-weight: bold;
+  color: blue;
+}
+
+.navbar-nav me-auto {
+  background-color: blue;
+  align-items:flex-end;
+ }
+
+ .navbar-brand {
+  height: auto;
+  font-family: Helvetica;
+
+ }
