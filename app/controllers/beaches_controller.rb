@@ -1,5 +1,4 @@
 class BeachesController < ApplicationController
-
   def index
     @beaches = Beach.all
   end
@@ -19,6 +18,7 @@ class BeachesController < ApplicationController
 
   def show
     @beach = Beach.find(params[:id])
+    #@reviews = Review.all.where(beach_id: beach.id)
   end
 
   private

@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :set_beach, only: [:new, :create]
+
   def new
     @review = Review.new
   end
@@ -10,6 +12,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_beach
+    @beach = Beach.find(params[:beach_id])
+  end
 
   def review_params
     params.require(:review).permit(:comment, :rating)
