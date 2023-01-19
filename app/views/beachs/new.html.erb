@@ -1,7 +1,11 @@
-<%= simple_form_for(restaurant) do |f| %>
+<h1>New Beach</h1>
+
+<div>
+  <%= simple_form_for(@beach) do |f| %>
   <%= f.input :name %>
   <%= f.input :location %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.submit %>
-<% end %>
+  <% end %>
+</div>
