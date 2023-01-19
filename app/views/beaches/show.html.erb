@@ -2,3 +2,5 @@
 <p><%= @beach.location %></p>
 <p><%= @beach.price %></p>
 <p><%= @beach.description %></p>
+
+<%= link_to "Book a beach", new_beach_booking_path(@beach) %>
