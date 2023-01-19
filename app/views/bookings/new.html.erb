@@ -1,8 +1,15 @@
-<h1>New review</h1>
-<%= form_with model: @booking do |f| %>
-  <%= f.label :start_date %>
-  <%= f.text_field :start_date %>
-  <%= f.label :end_date %>
-  <%= f.text_field :end_date %>
-  <%= f.submit %>
-<% end %>
+<h1>New booking</h1>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create a new booking</h3>
+        <%= simple_form_for [@beach, @booking] do |f| %>
+          <%= f.input :start_date, placeholder: 'Start Date' %>
+          <%= f.input :end_date, placeholder: 'End Date' %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
