@@ -1,8 +1,14 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
 
-      <h2>Log in</h2>
+    <div class="form-page">
+
+      <div>
+        <img class= "img-container" src="https://plus.unsplash.com/premium_photo-1663133679087-bc5deb50ab00?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9uZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="beach">
+      </div>
+
+      <div class="form-container">
+      <h2 class="mt-5">It's great to see you again! </h2>
+      <h3 class="mb-5">On which beach are you going to put your flip flops?</h3>
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
         data: {turbo: false}) do |f| %>
@@ -17,13 +23,15 @@
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
 
-        <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
-        </div>
-      <% end %>
+        <div class="form-btn">
+          <div class="form-actions">
+            <%= f.button :submit, "Log in", class: "btn-primary" %>
+          </div>
+          <% end %>
 
-      <%= render "devise/shared/links" %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
 
     </div>
-  </div>
 </div>
