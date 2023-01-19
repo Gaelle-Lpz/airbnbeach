@@ -9,20 +9,36 @@
 
 .navbar-lewagon .navbar-brand img {
   width:50px;
+  display: block;
+  margin-right: 370px;
 }
 
 .nav-link {
   font-weight: bold;
-  color: blue;
+  color: #0D6EFD;
 }
 
 .navbar-nav me-auto {
-  background-color: blue;
+  background-color: #0D6EFD;
   align-items:flex-end;
  }
 
  .navbar-brand {
   height: auto;
-  font-family: Helvetica;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  color: #E67E22;
+  font-size: x-large;
+  display:contents;
+
+
+ }
+
+ .fa-light {
+
+  color: #0E0000;
+  padding-right: 50px;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
  }

@@ -1,8 +1,15 @@
 // Specific CSS for your home-page
+@import "components/banner";
+@import "components/navbar";
+@import "components/button";
+@import "components/container";
+@import "components/avatar";
+@import "components/footer";
+
 
 body {
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   color: darkblue;
+   color: #0D6EFD;
    background-size: cover;
    background-repeat: no-repeat;
    margin-bottom: 0%;
@@ -16,104 +23,12 @@ body {
 //   min-height: 100vh;
 
 
-
-
 h1 {
   float: left;
-  color: darkblue;
+  color: #0D6EFD;
   margin-bottom: 5px;
   margin-top: 5px;
   margin-left: 5px ;
   text-align: left !important;
   width: 100%;
-}
-
-.button {
-  display: flex;
-  //flex-direction: column;//only vertical
-  align-items: center;//both vertical and horizonal
-
-}
-
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  height: 960px;
-  background-repeat: no-repeat;
-}
-
-.banner h1 {
-  margin: 0;
-  color: rgb(34, 0, 255);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
-  font-weight: bold;
-  margin-right: 20px;
-}
-
-.banner p {
-  font-size: 24px;
-  color: #1f1404;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-
-.container {
-margin-left: 50px;
-
-}
-
-//footer
-
-
-.footer {
-  background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 0px 50px;
-  color: rgba(15, 7, 246, 0.896);
-  padding-bottom: 0%;
-}
-
-.footer-links {
-  display: flex;
-  align-items: center;
-  color: darkblue;
-}
-.footer-links a {
-  color: rgb(248, 84, 14);
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-
-.footer-copyright {
-  color: darkblue;
-  height: 14px;
-  font-weight: bold;
-  font-family: Helvetica;
-}
-
-
-.footer-links a:hover {
-  opacity: 1;
-}
-
-// footer end
-
-// if contener nedeed on the home page, into the body :
-
-.container_home {
-  height: 500px;
-}
-
-.fab {
-  color: darkblue;
-  font-weight: bold;
-
 }

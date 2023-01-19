@@ -1,0 +1,51 @@
+.button {
+  display: flex;
+  //flex-direction: column;//only vertical
+  align-items: center;//both vertical and horizonal
+  border-radius: 10px;
+
+}
+
+
+
+.btn-primary {
+  border-radius: 10px;
+
+}
+
+
+// Button for sign in form
+
+.btn {
+
+color: blanchedalmond;
+border-width:1px;
+ border-style:dotted;
+ border-color:#0D6EFD;
+ background-color: #E67E22;
+
+}
+
+
+.btn a:hover {
+  color: blanchedalmond;
+  border-width:1px;
+  border-style:dotted;
+  border-color:#0D6EFD;
+  background-color: #E67E22;
+}
+
+
+.form-actions {
+
+ color: rgb(47, 95, 255);
+ border-color:#0D6EFD;
+ font-weight: bold;
+}
+
+.btn-lg {
+
+margin-right: 150px;
+margin-left: -50px;
+display: block;
+}
