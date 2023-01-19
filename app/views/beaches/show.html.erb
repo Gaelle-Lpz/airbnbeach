@@ -3,4 +3,6 @@
 <p><%= @beach.price %></p>
 <p><%= @beach.description %></p>
 
-<%= link_to "Book a beach", new_beach_booking_path(@beach) %>
+<p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
+<p><%= link_to " see reviews", beach_reviews_path(@beach) %></p>
+<p><%= link_to "add reviews", new_beach_review_path(@beach) %></p>
