@@ -1,38 +1,45 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
 
-    <h2>Sign up</h2>
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
-      data: {turbo: false}) do |f| %>
-      <%= f.error_notification %>
+    <div class="form-page">
 
-      <div class="form-inputs">
-        <%= f.input :user_name,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "user_name" }%>
-        <%= f.input :email,
-                    required: true,
-                    autofocus: true,
-                    input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: true,
-                    input_html: { autocomplete: "new-password" } %>
+      <div>
+        <img class= "img-container" src="https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="beach">
       </div>
 
-      <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
-      </div>
-    <% end %>
+      <div class="form-container">
+        <h2 class="mb-5 mt-5">Ready to discover the most beautiful beaches in the world ?</h2>
 
-    <%= render "devise/shared/links" %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
+          data: {turbo: false}) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :user_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "user_name" }%>
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Create an account",  class: "btn-primary"  %>
+          </div>
+        <% end %>
+      </div>
 
     </div>
-  </div>
+
+
+
 </div>
