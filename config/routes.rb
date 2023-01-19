@@ -7,9 +7,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :beaches do
-    resources :bookings do
-      resources :reviews
-    end
+    resources :reviews
+    resources :bookings
   end
   get "my_bookings", to: "bookings#my_bookings"
 end
