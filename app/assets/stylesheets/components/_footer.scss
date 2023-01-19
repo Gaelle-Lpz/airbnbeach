@@ -1,5 +1,5 @@
 .footer {
-  background: #f4f4f4;
+  background: $light-gray;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,12 +14,12 @@
 .footer-links {
   display: flex;
   align-items: center;
-  color: #0D6EFD;
+  color: $blue;
   font-size: x-large;
 }
 
 .footer-links a {
-  color: rgb(248, 84, 14);
+  color: $orange;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
@@ -27,7 +27,7 @@
 }
 
 .footer-copyright {
-  color: #0D6EFD;
+  color: $blue;
   height: 14px;
   font-weight: bold;
   font-family: Helvetica;
@@ -39,7 +39,7 @@
 
 
 .fab {
-  color: #0D6EFD;
+  color: $blue;
   font-weight: bold;
 
 }

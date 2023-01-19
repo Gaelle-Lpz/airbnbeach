@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,11 +17,11 @@
 
 .nav-link {
   font-weight: bold;
-  color: #0D6EFD;
+  color: $blue;
 }
 
 .navbar-nav me-auto {
-  background-color: #0D6EFD;
+  background-color: $blue;
   align-items:flex-end;
  }
 
@@ -29,7 +29,7 @@
   height: auto;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bolder;
-  color: #E67E22;
+  color: $orange;
   font-size: x-large;
   display:contents;
   padding-left: 20px;
@@ -38,7 +38,7 @@
 
  .fa-light {
 
-  color: #00080e;
+  color: $gray;
   padding-right: 50px;
   font-size: 18px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

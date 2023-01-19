@@ -15,28 +15,28 @@
 
 .btn {
 
-color: blanchedalmond;
+color: $light-gray;
 border-width:1px;
  border-style:dotted;
- border-color:#0D6EFD;
- background-color: #E67E22;
+ border-color:$blue;
+ background-color: $orange;
 
 }
 
 
 .btn a:hover {
-  color: blanchedalmond;
+  color: $light-gray;
   border-width:1px;
   border-style:dotted;
-  border-color:#0D6EFD;
-  background-color: #E67E22;
+  border-color:$blue;
+  background-color: $orange;
 }
 
 
 .form-actions {
 
- color: rgb(47, 95, 255);
- border-color:#0D6EFD;
+ color: $blue;
+ border-color:$blue;
  font-weight: bold;
 }
 
@@ -46,3 +46,19 @@ margin-right: 150px;
 margin-left: -50px;
 display: block;
 }
+
+.btn2 {
+
+ font-family: 14px;
+ color: $light-gray;
+ border-width:2px;
+ border-style:double;
+ background-color: $blue;
+ display: block;
+ margin-right: 20px;
+ width: 60px;
+ height: 35px;
+ text-decoration: none;
+ text-align: center;
+
+  }
