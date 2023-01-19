@@ -4,6 +4,9 @@ class BeachesController < ApplicationController
     @beaches = Beach.all
   end
 
+  def edit
+  end
+
   def new
     @beach = Beach.new
   end
@@ -16,5 +19,11 @@ class BeachesController < ApplicationController
 
   def show
     @beach = Beach.find(params[:id])
+  end
+
+  private
+
+  def beach_params
+    params.require(:beach).permit(:name, :location, :price, :description)
   end
 end

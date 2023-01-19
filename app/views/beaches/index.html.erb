@@ -5,8 +5,10 @@
 	  <ul>
       <% @beaches.each do |beach| %>
         <li><%= beach.name %></li>
+        <%= link_to beach.name, beach_path(beach.id) %>
       <% end %>
-</ul>
+  </ul>
+<%= link_to "Add a new ", new_beach_path %>
     </div>
   </div>
 </div>
