@@ -1,2 +1,6 @@
 <h1>my bookings</h1>
-<%= @bookings %>
+<% @bookings.each do |booking| %>
+  <div>
+    <%= booking.id %>
+  </div>
+<% end %>
