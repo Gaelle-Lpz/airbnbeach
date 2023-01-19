@@ -1,0 +1,64 @@
+.button {
+  display: flex;
+  //flex-direction: column;//only vertical
+  align-items: center;//both vertical and horizonal
+  border-radius: 10px;
+}
+
+
+.btn-primary {
+  border-radius: 10px;
+
+}
+
+// Button for sign in form
+
+.btn {
+
+color: $light-gray;
+border-width:1px;
+ border-style:dotted;
+ border-color:$blue;
+ background-color: $orange;
+
+}
+
+
+.btn a:hover {
+  color: $light-gray;
+  border-width:1px;
+  border-style:dotted;
+  border-color:$blue;
+  background-color: $orange;
+}
+
+
+.form-actions {
+
+ color: $blue;
+ border-color:$blue;
+ font-weight: bold;
+}
+
+.btn-lg {
+
+margin-right: 150px;
+margin-left: -50px;
+display: block;
+}
+
+.btn2 {
+
+ font-family: 14px;
+ color: $light-gray;
+ border-width:2px;
+ border-style:double;
+ background-color: $blue;
+ display: block;
+ margin-right: 20px;
+ width: 60px;
+ height: 35px;
+ text-decoration: none;
+ text-align: center;
+
+  }

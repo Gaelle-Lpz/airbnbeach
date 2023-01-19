@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+body {
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color: #0D6EFD;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin-bottom: 0%;
+}
+
+// If category / index in the home page, linear background gradient proposition :
+
+//   background: #ff5f6d;
+//   background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
+//   background: linear-gradient(to right, #ff5f6d, #ffc371);
+//   min-height: 100vh;
+
+
+h1 {
+  float: left;
+  color: #0D6EFD;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5px ;
+  text-align: left !important;
+  width: 100%;
+}

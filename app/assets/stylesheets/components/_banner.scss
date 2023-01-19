@@ -1,0 +1,27 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 960px;
+  background-repeat: no-repeat;
+}
+
+.banner h1 {
+  margin: 0;
+  color: $blue;
+  text-shadow: 1px 1px 3px $gray;
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-indent: -50px;
+}
+
+.banner p {
+  font-size: 24px;
+  color: #1f1404;
+  opacity: .7;
+  text-shadow: 1px 1px 3px $gray;
+  margin-right: 20px;
+  text-indent: -50px;
+
+}
