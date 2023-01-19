@@ -11,4 +11,5 @@ Rails.application.routes.draw do
       resources :reviews
     end
   end
+  get "my_bookings", to: "bookings#my_bookings"
 end
