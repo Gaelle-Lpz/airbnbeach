@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
-body {
+.homebody {
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   color: #0D6EFD;
+   color: $blue;
    background-size: cover;
    background-repeat: no-repeat;
    margin-bottom: 0%;
@@ -15,9 +15,9 @@ body {
 //   min-height: 100vh;
 
 
-h1 {
+.homeh1 {
   float: left;
-  color: #0D6EFD;
+  color: $blue;
   margin-bottom: 5px;
   margin-top: 5px;
   margin-left: 5px ;
