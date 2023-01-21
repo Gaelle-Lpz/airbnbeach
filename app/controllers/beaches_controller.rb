@@ -1,9 +1,11 @@
 class BeachesController < ApplicationController
+  before_action :set_beach, only: [:show, :edit, :update, :destroy]
   def index
     @beaches = Beach.all
   end
 
-  def edit
+  def show
+    @reviews = @beach.reviews
   end
 
   def new
@@ -16,12 +18,24 @@ class BeachesController < ApplicationController
     @beach.save
   end
 
-  def show
-    @beach = Beach.find(params[:id])
-    #@reviews = Review.all.where(beach_id: beach.id)
+  def edit
+  end
+
+  def update
+    @beach.update(beach_params)
+    redirect_to beach_path(@beach)
+  end
+
+  def destroy
+    @beach.destroy
+    redirect_to beaches_path
   end
 
   private
+
+  def set_beach
+    @beach = Beach.find(params[:id])
+  end
 
   def beach_params
     params.require(:beach).permit(:name, :location, :price, :description)

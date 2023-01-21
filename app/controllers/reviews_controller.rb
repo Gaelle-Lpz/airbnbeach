@@ -6,9 +6,12 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
-    @review.save
-    redirect_to review_path(@review)
+    unless Booking.where(user: current_user, beach: @beach).nil?
+      @review = Review.new(review_params)
+      @review.booking = Booking.where(user: current_user, beach: @beach).last
+      @review.save
+      redirect_to beach_path(@beach)
+    end
   end
 
   private
