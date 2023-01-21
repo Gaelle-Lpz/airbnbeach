@@ -7,20 +7,24 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
   </ul>
+
+<% if user_signed_in? %>
+  Welcome, <%= current_user.user_name %>
+<% else %>
   <ul class="navbar-nav me-auto">
           <li class="nav-item">
           <a class="btn btn-primary" href="/users/sign_up" role="button">Sign up</a>
           </li>
   </ul>
-    </div>
-  </div>
+
       <ul class="navbar-nav me-auto">
           <li class="nav-item">
            <a class="btn btn-primary" href="/users/sign_in" role="button">Login</a>
           </li>
+           </ul>
 
-    </div>
+<% end %>
    </div>
-  </div>
+ </div>
+</div>
