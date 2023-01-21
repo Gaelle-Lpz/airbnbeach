@@ -1,7 +1,12 @@
 <h1>my bookings</h1>
 <% @bookings.each do |booking| %>
   <div>
+    <p>Booking ID</p>
     <%= booking.id %>
+    <p>Start Date</p>
+    <%= booking.start_date %>
+    <p>End Date</p>
+    <%= booking.end_date %>
     <p><%= link_to "add reviews", new_beach_review_path(booking.beach) %></p>
   </div>
 <% end %>
