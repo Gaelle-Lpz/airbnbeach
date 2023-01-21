@@ -1,8 +1,8 @@
-<div class ="container mt-5>
-  <h1><%=@beach.name %></h1>
-  <p><%= @beach.location %></p>
-  <p><%= @beach.price %></p>
-  <p><%= @beach.description %></p>
+<h1><%=@beach.name %></h1>
+<p><%= @beach.location %></p>
+<p><%= @beach.price %></p>
+<p><%= @beach.description %></p>
+<p><%= @reviews%></p>
 
   <p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
   <p><%= link_to "add reviews", new_beach_review_path(@beach) %></p>
