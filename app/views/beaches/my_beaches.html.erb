@@ -1,0 +1,14 @@
+<h1>my beaches</h1>
+<% @beaches.each do |beach| %>
+  <div>
+    <p>Beach name</p>
+    <%= beach.name %>
+    <p>Location</p>
+    <%= beach.location %>
+    <p>Price</p>
+    <%= beach.price %>
+    <p>Description</p>
+    <%= beach.description%>
+    <p><%= link_to "Go to beach", beach_path(beach) %></p>
+  </div>
+<% end %>
