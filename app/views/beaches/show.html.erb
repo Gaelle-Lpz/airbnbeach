@@ -1,7 +1,13 @@
-<h1><%=@beach.name %></h1>
-<p><%= @beach.location %></p>
-<p><%= @beach.price %></p>
-<p><%= @beach.description %></p>
+<div class ="container mt-5>
+  <h1><%=@beach.name %></h1>
+  <p><%= @beach.location %></p>
+  <p><%= @beach.price %></p>
+  <p><%= @beach.description %></p>
 
-<p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
-<p><%= link_to "add reviews", new_beach_review_path(@beach) %></p>
+  <p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
+  <p><%= link_to "add reviews", new_beach_review_path(@beach) %></p>
+  <p><%=link_to "Delete", beach_path(@beach), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+  </p>
+
+
+</div>
