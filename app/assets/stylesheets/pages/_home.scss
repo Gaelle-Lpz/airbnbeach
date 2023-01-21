@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 .homebody {
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-family: $body-font;
    color: $blue;
    background-size: cover;
    background-repeat: no-repeat;
@@ -23,4 +23,5 @@
   margin-left: 5px ;
   text-align: left !important;
   width: 100%;
+  font-family: $headers-font;
 }
