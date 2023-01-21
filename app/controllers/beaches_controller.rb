@@ -31,6 +31,10 @@ class BeachesController < ApplicationController
     redirect_to beaches_path
   end
 
+  def my_beaches
+    @beaches = Beach.where(user: current_user)
+  end
+
   private
 
   def set_beach
