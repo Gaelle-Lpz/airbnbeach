@@ -1,6 +1,8 @@
 <div class ="container">
   <div class = "row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+    <h3>Do you have an incredible private beach? Why not offer it for rent?</h3>
+    <%= link_to "Offer a beach for rent", new_beach_path %>
     <h1>Beaches</h1>
 	  <ul>
       <% @beaches.each do |beach| %>
@@ -8,7 +10,6 @@
         <%= link_to beach.name, beach_path(beach.id) %>
       <% end %>
   </ul>
-<%= link_to "Add a new ", new_beach_path %>
     </div>
   </div>
 </div>
