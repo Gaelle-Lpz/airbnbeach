@@ -5,6 +5,7 @@ class BeachesController < ApplicationController
   end
 
   def show
+    @reviews = @beach.reviews
   end
 
   def new
@@ -21,8 +22,8 @@ class BeachesController < ApplicationController
   end
 
   def update
-    @beach.update(beach_parms)
-    redirect_to_path(@beach)
+    @beach.update(beach_params)
+    redirect_to beach_path(@beach)
   end
 
   def destroy
