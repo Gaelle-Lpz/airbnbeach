@@ -8,13 +8,14 @@
 <div class="container-beaches row">
 <% @bookings.each do |booking| %>
     <div class="beach-card col-sm">
-    <p>Booking Reference: <%= booking.id %></p>
+    <p><%= link_to "Booking Reference: #{booking.id}", beach_booking_path(booking.beach, booking) %></p>
     <p>Beach: <%= booking.beach.name %></p>
     <p>Start Date</p>
     <%= booking.start_date %>
     <p>End Date</p>
     <%= booking.end_date %>
     <p><%= link_to "add reviews", new_beach_review_path(booking.beach) %></p>
+  </div>
   </div>
 <% end %>
 </div>
