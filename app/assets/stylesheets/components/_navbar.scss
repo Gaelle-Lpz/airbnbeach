@@ -27,7 +27,7 @@
 
  .navbar-brand {
   height: auto;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: $body-font;
   font-weight: bolder;
   color: $orange;
   font-size: x-large;
@@ -41,6 +41,6 @@
   color: $gray;
   padding-right: 50px;
   font-size: 18px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: $body-font;
 
  }
