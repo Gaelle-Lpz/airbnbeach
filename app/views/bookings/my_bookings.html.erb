@@ -1,9 +1,15 @@
-<%= link_to "All Beaches", beaches_path, class: "btn btn-primary ms-3 me-3" %>
+<div class ="container">
+  <div class="btn-index mt-4 mb-4">
+    <%= link_to "All Beaches", beaches_path, class: "btn btn-primary ms-4 me-4" %>
+</div>
+
 <h1>my bookings</h1>
+
+<div class="container-beaches row">
 <% @bookings.each do |booking| %>
-  <div>
-    <p>Booking ID</p>
-    <%= booking.id %>
+    <div class="beach-card col-sm">
+    <p>Booking Reference: <%= booking.id %></p>
+    <p>Beach: <%= booking.beach.name %></p>
     <p>Start Date</p>
     <%= booking.start_date %>
     <p>End Date</p>
@@ -11,3 +17,5 @@
     <p><%= link_to "add reviews", new_beach_review_path(booking.beach) %></p>
   </div>
 <% end %>
+</div>
+</div>
