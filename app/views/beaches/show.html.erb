@@ -1,4 +1,10 @@
 <div class ="container">
+  <div class="btn-index mt-4 mb-4">
+    <%= link_to "Book a beach", new_beach_booking_path(@beach), class: "btn btn-primary ms-3 me-3" %>
+    <%= link_to "Delete the beach", beach_path(@beach), class: "btn btn-primary ms-3 me-3", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%= link_to "See all beaches", beaches_path, class: "btn btn-primary ms-3 me-3" %>
+  </div>
+
   <div class = "row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
 <h1><%=@beach.name %></h1>
@@ -6,6 +12,9 @@
 <p><%= @beach.price %></p>
 <p><%= @beach.description %></p>
 <% @reviews.each do |review| %>
+
+
+
   <div>
     <p>Comment</p>
     <p><%= review.comment %></p>
@@ -14,10 +23,10 @@
   </div>
 <% end %>
 
-  <p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
+<div>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" width="400" height="400"  alt="beach plage">
+</div>
 
-  <p><%=link_to "Delete", beach_path(@beach), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%> </p>
-  <p><%= link_to "See all beaches", beaches_path %></p>
     </div>
   </div>
 </div>
