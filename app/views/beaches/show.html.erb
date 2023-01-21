@@ -5,9 +5,17 @@
 <p><%= @beach.location %></p>
 <p><%= @beach.price %></p>
 <p><%= @beach.description %></p>
-<p><%= @reviews%></p>
+<% @reviews.each do |review| %>
+  <div>
+    <p>Comment</p>
+    <p><%= review.comment %></p>
+    <p>Rating</p>
+    <p><%= review.rating %></p>
+  </div>
+<% end %>
 
   <p><%= link_to "Book a beach", new_beach_booking_path(@beach) %></p>
+  
   <p><%= link_to "add reviews", new_beach_review_path(@beach) %></p>
   <p><%=link_to "Delete", beach_path(@beach), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%> </p>
   <p><%= link_to "See all beaches", beaches_path %></p>
