@@ -22,7 +22,7 @@ class BeachesController < ApplicationController
 
   def update
     @beach.update(beach_parms)
-    redirect_to_path(@beach)
+    redirect_to beach_path(@beach)
   end
 
   def destroy
