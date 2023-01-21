@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.save
-    redirect_to review_path(@review)
+    redirect_to beach_path(@beach)
   end
 
   private

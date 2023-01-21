@@ -2,5 +2,6 @@
 <% @bookings.each do |booking| %>
   <div>
     <%= booking.id %>
+    <p><%= link_to "add reviews", new_beach_review_path(booking.beach) %></p>
   </div>
 <% end %>
