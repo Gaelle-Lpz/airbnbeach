@@ -16,6 +16,7 @@ class BeachesController < ApplicationController
     @beach = Beach.new(beach_params)
     @beach.user = current_user
     @beach.save
+    redirect_to my_beaches_path
   end
 
   def edit
