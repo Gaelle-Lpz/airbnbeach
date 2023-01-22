@@ -6,6 +6,7 @@ class BeachesController < ApplicationController
 
   def show
     @reviews = @beach.reviews
+    @my_beach_bookings = @beach.bookings
   end
 
   def new
