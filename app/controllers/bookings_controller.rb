@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show]
+  before_action :set_booking, only: [:show, :destroy]
   before_action :set_beach, only: [:new, :create]
 
   def index
@@ -7,7 +7,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @review = Review.new(bookig: @booking)
+    @review = Review.new(booking: @booking)
   end
 
   def new
@@ -24,6 +24,13 @@ class BookingsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    # No need for app/views/restaurants/destroy.html.erb
+    redirect_to my_bookings_path, status: :see_other
   end
 
   def my_bookings
