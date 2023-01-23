@@ -6,6 +6,7 @@ class BeachesController < ApplicationController
 
   def show
     @reviews = @beach.reviews
+    @my_beach_bookings = @beach.bookings
   end
 
   def new
@@ -16,6 +17,7 @@ class BeachesController < ApplicationController
     @beach = Beach.new(beach_params)
     @beach.user = current_user
     @beach.save
+    redirect_to my_beaches_path
   end
 
   def edit
