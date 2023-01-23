@@ -120,6 +120,13 @@ first_booking = Booking.create!(
   beach: first_beach
 )
 
+second_booking = Booking.create!(
+  start_date: "Fri, 21 Jul 2023",
+  end_date: "Thu, 21 Sep 2023",
+  user: fourth_user,
+  beach: first_beach
+)
+
 # Create review
 Review.create!(
   comment: "Beach at the top!",
@@ -136,11 +143,11 @@ Review.create!(
 Review.create!(
   comment: "too many jellyfish",
   rating: 2,
-  booking: first_booking
+  booking: second_booking
 )
 
 Review.create!(
   comment: "the lifeguard was very nice !",
   rating: 5,
-  booking: first_booking
+  booking: second_booking
 )
