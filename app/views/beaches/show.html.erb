@@ -1,6 +1,8 @@
 <div class ="container">
   <div class="btn-index mt-4 mb-4">
+  <%if @beach.user != current_user%>
     <%= link_to "Book a beach", new_beach_booking_path(@beach), class: "btn btn-primary ms-3 me-3" %>
+  <%end %>
     <%= link_to "Delete the beach", beach_path(@beach), class: "btn btn-primary ms-3 me-3", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     <%= link_to "See all beaches", beaches_path, class: "btn btn-primary ms-3 me-3" %>
   </div>
@@ -17,6 +19,21 @@
     <p>Price: <%= @beach.price %></p>
     <p>Description:</p>
     <p><%= @beach.description %></p>
+  </div>
+  <div class="container-beaches row">
+    <h2>Bookings</h2>
+    <% @my_beach_bookings.each do |booking| %>
+      <div class="beach-card col-sm">
+        <div class="beach-card-body">
+          <div class="beach-card-location">
+          <p>Booking Reference : <%= booking.id %></p>
+          <p>Start Date : <%= booking.start_date %></p>
+          <p>End Date : <%= booking.end_date %></p>
+          <p>Status : <%= booking.status %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
   <div class="container-beaches row">
     <% @reviews.each do |review| %>
