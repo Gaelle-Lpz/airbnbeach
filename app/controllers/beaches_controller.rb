@@ -6,6 +6,8 @@ class BeachesController < ApplicationController
 
   def show
     @reviews = @beach.reviews
+    @average_rating = 0.0
+    @reviews.each { |review| @average_rating += review.rating / @reviews.size }
   end
 
   def new
