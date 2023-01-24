@@ -61,3 +61,15 @@ display: block;
 .btn-index {
   text-align: center;
 }
+
+.btn-beach {
+  display: flex;
+  background-color: $orange;
+  color: white;
+  width: 250px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 15px;
+  align-items: center;
+  text-align: center;
+}
