@@ -19,3 +19,13 @@
   margin: auto;
   justify-content: space-between;
 }
+
+.container-review {
+  display: flex;
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  padding: 16px;
+  border-bottom: 4px solid $light-gray;
+  border-radius: 5px;
+}

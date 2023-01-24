@@ -1,7 +1,5 @@
 <div class="container">
 
-
-  <h1>Many beaches are waiting for you :</h1>
   <%= form_with url: beaches_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
