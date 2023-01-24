@@ -4,13 +4,18 @@
   height: 500px;
 }
 
+/* Index */
 .container-beaches {
   justify-content: center;
 }
 
-// If category / index in the home page, linear background gradient proposition :
-
-//   background: #ff5f6d;
-//   background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
-//   background: linear-gradient(to right, #ff5f6d, #ffc371);
-//   min-height: 100vh;
+/* Show */
+.container-beach {
+  background-color: white;
+  border-radius: 15px;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
