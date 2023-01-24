@@ -2,6 +2,11 @@ class BeachesController < ApplicationController
   before_action :set_beach, only: [:show, :edit, :update, :destroy]
   def index
     @beaches = Beach.all
+    if params[:query].present?
+      @beaches = Beach.beach_search(params[:query])
+    else
+      @beaches = Beach.all
+    end
   end
 
   def show
