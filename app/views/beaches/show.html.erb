@@ -12,11 +12,14 @@
 
     <div class= "card-beach-right">
       <div>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
+        <% 5.times do |i| %>
+          <% if i < @beach.average_rating.floor %>
+            <i class="fas fa-star"></i>
+          <% else %>
+            <i class="far fa-star"></i>
+          <% end %>
+        <% end %>
+
       </div>
       <h3>Description :</h3>
       <p> <%= @beach.description %></p>
@@ -31,11 +34,18 @@
     </div>
   </div>
 
-  <div class="container-review">
+  <div class="container-reviews mt-5">
+
      <% @reviews.each do |review| %>
-        <p>Review</p>
-        <p>Comment : <%= review.comment %></p>
-        <p>Rating : <%= review.rating %></p>
+      <div class="container-review">
+        <div class="user-review">
+          <p><%= review.booking.user.user_name %> :</p>
+          <i class="fas fa-star"></i><%= sprintf('%.1f', review.rating) %>
+        </div>
+        <div class="comment-review">
+          <p><%= review.comment %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 
