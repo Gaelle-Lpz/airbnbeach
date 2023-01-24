@@ -1,24 +1,75 @@
+/* Beach Index */
 .beach-card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 400px;
   margin: 16px;
   border-radius: 5px;
 }
 
 .beach-card img {
-  width: 100%;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.2);
 }
 
 .beach-card-body {
+  position: relative;
+  width: 300px;
+  height: 100px;
   padding: 2px 16px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 15px 15px;
 }
 
 .beach-card-title {
-  font-size: 22px;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
 }
 
 .beach-card-location {
   font-size: 14px;
+}
+
+.beach-card-price {
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+  color: gray;
+}
+
+.beach-card-rating {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  color: gray;
+}
+
+/* Beach Show */
+
+.card-beach-left {
+  width: 50%;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
+  border-radius: 15px 0 0 15px ;
+}
+
+.card-beach-right {
+  position: relative;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.card-beach-bottom {
+  position: absolute;
+  width: 98%;
+  bottom: 6px;
+  right: 6px;
+}
+
+/* Beach Show Reviews */
+.comment-review {
+  margin-left: 76px;
   color: gray;
 }
