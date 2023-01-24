@@ -8,6 +8,7 @@ class BeachesController < ApplicationController
         lng: beach.longitude
 
       }
+    end
 
     if params[:query].present?
       @beaches = Beach.beach_search(params[:query])

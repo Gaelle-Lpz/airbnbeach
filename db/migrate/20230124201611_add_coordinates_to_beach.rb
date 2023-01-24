@@ -1,4 +1,4 @@
-class AddCoordinatesToBeaches < ActiveRecord::Migration[7.0]
+class AddCoordinatesToBeach < ActiveRecord::Migration[7.0]
   def change
     add_column :beaches, :latitude, :float
     add_column :beaches, :longitude, :float
