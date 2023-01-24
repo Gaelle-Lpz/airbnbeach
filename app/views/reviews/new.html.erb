@@ -1,8 +1,16 @@
-<h1>Review</h1>
+<div class="container-form8">
+<section>
+<div class="container-form9">
+ <div class="col-12 col-md-10 offset-lg-1">
+<h5>Add your Review</h5>
 <%= simple_form_for [@beach, @review] do |f| %>
   <%= f.label :comment %>
   <%= f.text_field :comment %>
   <%= f.label :rating %>
   <%= f.text_field :rating %>
-  <%= f.submit %>
+   <%= f.submit class: 'btn btn-flat' %>
 <% end %>
+     </div>
+	 </div>
+</section>
+</div>
