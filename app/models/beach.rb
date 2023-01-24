@@ -4,6 +4,10 @@ class Beach < ApplicationRecord
   has_many :reviews, through: :bookings
   validates :name, :location, :price, :description, presence: true
 
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
+
   include PgSearch::Model
 
   pg_search_scope :beach_search,
@@ -17,4 +21,5 @@ class Beach < ApplicationRecord
     reviews.each { |review| avg_rating += review.rating / reviews.size }
     return avg_rating
   end
+
 end

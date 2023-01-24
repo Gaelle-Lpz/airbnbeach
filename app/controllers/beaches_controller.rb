@@ -2,10 +2,18 @@ class BeachesController < ApplicationController
   before_action :set_beach, only: [:show, :edit, :update, :destroy]
   def index
     @beaches = Beach.all
+
+    @markers = @beaches.geocoded.map do |beach|
+      { lat: beach.latitude,
+        lng: beach.longitude
+
+      }
+
     if params[:query].present?
       @beaches = Beach.beach_search(params[:query])
     else
       @beaches = Beach.all
+
     end
   end
 
