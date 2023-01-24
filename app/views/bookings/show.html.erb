@@ -6,5 +6,6 @@
     <%= @booking.start_date %>
     <p>End Date</p>
     <%= @booking.end_date %>
+    <p>Total Price : <%= @booking.total_price%> €</p>
      <%= link_to "Cancel", beach_booking_path(@booking), class: "btn btn-primary ms-3 me-3", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 </div>
