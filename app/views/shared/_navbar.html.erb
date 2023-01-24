@@ -1,32 +1,45 @@
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top" data-controller="navbar">
   <div class="container-fluid">
-      <a class="navbar-brand"> Airbnbeach
-      <img src="https://zupimages.net/up/23/03/nval.png" alt="Airbnbeach" />
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  </ul>
+    <div>
+      <%= link_to root_path do %>
+        <%= image_tag 'logoair.png', class:"logo" %>
+      <% end %>
 
-<% if user_signed_in? %>
-  Welcome, <%= current_user.user_name %>
- <%= button_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+    </div>
 
-<% else %>
-  <ul class="navbar-nav me-auto">
+    <div>
+      <% if user_signed_in? %>
+        Welcome, <%= current_user.user_name.capitalize %>
+      <% end %>
+    </div>
+
+    <div>
+      <% if user_signed_in? %>
+          <button class="toggler" data-action="click->navbar#toggleNav" data-navbar-target="btn" type="button" arial-label="toggle curtain navigation">
+            <span class="line l1"></span>
+            <span class="line l2"></span>
+            <span class="line l3"></span>
+          </button>
+
+      <% else %>
+        <ul class="navbar-nav me-auto">
           <li class="nav-item">
-          <a class="btn btn-primary" href="/users/sign_up" role="button">Sign up</a>
+            <a class="btn btn-primary me-3" href="/users/sign_up" role="button">Sign up</a>
           </li>
-  </ul>
-
-      <ul class="navbar-nav me-auto">
           <li class="nav-item">
-           <a class="btn btn-primary" href="/users/sign_in" role="button">Login</a>
+            <a class="btn btn-primary" href="/users/sign_in" role="button">Login</a>
           </li>
-           </ul>
+         </ul>
 
-<% end %>
+      <% end %>
+
    </div>
  </div>
+  <nav class="menu" data-target="navbar.nav">
+    <%= link_to "See All Beaches", beaches_path, class:"mb-3 nav-link" %>
+    <%= link_to "See my Beaches", my_beaches_path, class:"mb-3 nav-link" %>
+    <%= link_to "See my Bookings", my_bookings_path, class:"mb-3 nav-link" %>
+    <%= link_to "Add a Beach", new_beach_path, class:"mb-3 nav-link" %>
+    <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class:"nav-link" %>
+  </nav>
 </div>
