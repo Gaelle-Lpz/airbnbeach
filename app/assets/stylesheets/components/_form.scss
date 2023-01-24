@@ -18,3 +18,84 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+// css for add new beach form page
+
+.container-form4 {
+
+	max-width: 450px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 26px;
+	box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+	transition: .5s;
+
+}
+
+form {
+
+	padding: 20px;
+	opacity: .9;
+	border-radius: 26px;
+}
+
+.container-form5 {
+ background-position: 0%;
+  background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+h5 {
+color: $full-white;
+text-align: center;
+size: 16px;
+}
+
+// page form add a new booking :
+
+.container-form6 {
+  background-position: 0%;
+   background-image: url(https://images.unsplash.com/photo-1587137777104-516a64ed47e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1866&q=80);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+ .container-form7 {
+
+	max-width: 450px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 26px;
+	box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+	transition: .5s;
+  color: $yellow;
+  font-weight: bold;
+
+}
+
+// css for add new review form page
+
+.container-form8 {
+  background-position: 0%;
+  background-image: url(https://images.unsplash.com/photo-1507539989371-99615e449486?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1262&q=80);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+ .container-form9 {
+
+	max-width: 330px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 26px;
+	box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+	transition: .5s;
+  color: $full-white;
+  font-weight: bold;
+
+}
