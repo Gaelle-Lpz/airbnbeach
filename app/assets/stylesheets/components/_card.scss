@@ -1,3 +1,4 @@
+/* Beach Index */
 .beach-card {
   max-width: 400px;
   margin: 16px;
@@ -35,4 +36,27 @@
   bottom: 0;
   right: 6px;
   color: gray;
+}
+
+/* Beach Show */
+
+.card-beach-left {
+  width: 50%;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
+  border-radius: 15px 0 0 15px ;
+}
+
+.card-beach-right {
+  position: relative;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.card-beach-bottom {
+  position: absolute;
+  width: 98%;
+  bottom: 6px;
+  right: 6px;
 }

@@ -1,24 +1,33 @@
 <div class="container mt-5">
 
-  <div class="title-beach">
+  <div class="title-beach mt-5">
     <h1><%=@beach.name %></h1>
     <p><%= @beach.location %></p>
   </div>
 
-  <div class="container-beach">
+  <div class="container-beach mt-5">
 
     <div class="card-beach-left" style="background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80)">
     </div>
 
-    <div class= "card-beach-right p-3">
-        <h3>Description :</h3>
-        <p> <%= @beach.description %></p>
+    <div class= "card-beach-right">
+      <div>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <h3>Description :</h3>
+      <p> <%= @beach.description %></p>
+      <div class="card-beach-bottom">
         <p> <%= sprintf('%.2f', @beach.price)+"€ /day" %></p>
         <% if @beach.user != current_user %>
           <%= link_to "Reserve this Beach", new_beach_booking_path(@beach), class:"btn-reserve"%>
         <% else %>
           <%= link_to "Delete the beach", beach_path(@beach), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         <%end %>
+      </div>
     </div>
   </div>
 
