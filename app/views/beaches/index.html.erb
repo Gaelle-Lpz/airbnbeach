@@ -22,14 +22,16 @@
           <div class="beach-card-location">
             <%= beach.location %>
           </div>
+          <div class="beach-card-rating">
+            <i class="fas fa-star"></i><%= sprintf('%.1f', beach.average_rating) %>
+          </div>
           <div class="beach-card-price">
             <%= sprintf('%.2f', beach.price)+"€ /day" %>
-            <p>Average Rating: <%= sprintf('%.1f', beach.average_rating) %></p>
           </div>
         </div>
       <% end %>
     </div>
-    <% end %>
+    <% end %>Ò
   </div>
 
 

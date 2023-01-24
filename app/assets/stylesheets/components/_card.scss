@@ -34,7 +34,14 @@
 .beach-card-price {
   position: absolute;
   bottom: 0;
-  right: 6px;
+  right: 8px;
+  color: gray;
+}
+
+.beach-card-rating {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
   color: gray;
 }
 
