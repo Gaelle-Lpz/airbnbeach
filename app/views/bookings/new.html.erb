@@ -1,15 +1,14 @@
-<h1>New booking</h1>
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Create a new booking</h3>
+<div class="container-form6">
+<section>
+<div class="container-form7">
+ <div class="col-12 col-md-10 offset-lg-1">
+        <h5>Book your beach</h5>
         <%= simple_form_for [@beach, @booking] do |f| %>
           <%= f.input :start_date, placeholder: 'Start Date' %>
           <%= f.input :end_date, placeholder: 'End Date' %>
           <%= f.submit class: 'btn btn-flat' %>
         <% end %>
-      </div>
-    </div>
-  </div>
+     </div>
+	 </div>
+</section>
 </div>
