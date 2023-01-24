@@ -3,4 +3,8 @@ class Booking < ApplicationRecord
   belongs_to :beach
 
   has_many :reviews
+
+  def total_price
+    return end_date - start_date
+  end
 end
