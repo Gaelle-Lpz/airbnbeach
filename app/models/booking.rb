@@ -5,6 +5,6 @@ class Booking < ApplicationRecord
   has_many :reviews
 
   def total_price
-    return end_date - start_date
+    return ((end_date - start_date).to_i) * beach.price
   end
 end
