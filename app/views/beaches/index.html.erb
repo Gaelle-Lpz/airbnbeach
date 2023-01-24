@@ -16,7 +16,7 @@
           </div>
           <div class="beach-card-price">
             <%= sprintf('%.2f', beach.price)+"€ /day" %>
-            <p>Average Rating: <%= beach.average_rating %></p>
+            <p>Average Rating: <%= sprintf('%.1f', beach.average_rating) %></p>
           </div>
         </div>
       <% end %>
