@@ -1,12 +1,15 @@
-<h1>New Beach</h1>
-
-<div>
+ 	<div class="container-form5">
+<section>
+		<div class="container-form4">
+      <h5>Add your beach</h5>
   <%= simple_form_for(@beach) do |f| %>
   <%= f.input :name %>
   <%= f.input :location %>
   <%= f.input :price %>
   <%= f.input :description %>
-  <%= f.submit %>
+  <%= f.submit class: 'btn btn-default' %>
   <% end %>
-
-</div>
+     </div>
+	 </div>
+</section>
+ </div>
