@@ -41,7 +41,7 @@
 }
 
 
-// css for add new beach form page
+// css to add new beach form page
 
 .container-form4 {
 
@@ -69,4 +69,31 @@ color: $full-white;
 text-align: center;
 font-size: 20px;
 font-weight: bold;
+}
+
+// css to add new booking form page
+
+.container-form6 {
+
+ background-position: 0% 0%;
+ background-image: url(https://images.unsplash.com/photo-1587137777104-516a64ed47e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1866&q=80);
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 650px;
+ padding-top: 120px;
+
+ }
+
+ .container-form7 {
+
+	max-width: 450px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 26px;
+	box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+	transition: .5s;
+  color: $yellow;
+  font-weight: bold;
+
 }
