@@ -22,13 +22,14 @@
       </div>
 
       <div class="booking-card col-sm">
-        <p><%= link_to "Booking Reference: #{booking.id}", beach_booking_path(booking.beach, booking) %></p>
-        <p>Start Date</p>
-        <%= booking.start_date %>
-        <p>End Date</p>
-        <%= booking.end_date %>
-        <p>Total Price : <%= booking.total_price%> €</p>
-        <p><%= link_to "add reviews", new_beach_review_path(booking.beach) %></p>
+        <p><%= link_to "Booking Reference n° #{booking.id}", beach_booking_path(booking.beach, booking) %></p>
+        <p>Start Date : <%= booking.start_date %></p>
+        <p>End Date : <%= booking.end_date %></p>
+        <%= link_to beach_booking_path(booking.beach, booking), class: "trash-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this Booking ?"} do%>
+          <i class="fa-solid fa-trash"></i>
+        <% end %>
+        <p>Total Price : <%= sprintf('%.2f', booking.total_price)%> €</p>
+        <p><%= link_to "add reviews", new_beach_review_path(booking.beach), class: "btn-reserve" %></p>
       </div>
     </div>
 

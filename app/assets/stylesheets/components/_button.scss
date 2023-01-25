@@ -78,3 +78,15 @@ display: block;
   background-color: $blue;
   color: white;
 }
+
+.trash-btn {
+  font-size: 36px;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: $orange;
+}
+
+.trash-btn:hover {
+  color: $red;
+}
