@@ -1,23 +1,5 @@
 <div class="container">
 
-
-<div class= "map"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
-
-  <%= form_with url: beaches_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a beach"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-
-
   <div class="container-beaches row">
     <% @beaches.each do |beach| %>
 
@@ -39,6 +21,12 @@
       <% end %>
     </div>
     <% end %>
+  </div>
+
+  <div>
+    <%= link_to root_path do %>
+      <%= image_tag 'map-marker.png', class:"map-btn" %>
+     <% end %>
   </div>
 
 

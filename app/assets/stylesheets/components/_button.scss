@@ -78,3 +78,15 @@ display: block;
   background-color: $blue;
   color: white;
 }
+
+.map-btn {
+  position: fixed;
+  bottom: 80px;
+  left: 45%;
+  width: 120px;
+  transition: 0.5s ease-in-out;
+}
+
+.map-btn:hover {
+  width: 140px;
+}
