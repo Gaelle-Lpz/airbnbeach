@@ -4,28 +4,27 @@
   height: 500px;
 }
 
-/* Index */
-.container-beaches {
-  justify-content: center;
+
+// If category / index in the home page, linear background gradient proposition :
+
+//   background: #ff5f6d;
+//   background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
+//   background: linear-gradient(to right, #ff5f6d, #ffc371);
+//   min-height: 100vh;
+
+body {
+
+  min-height: 500px;
+  margin-bottom: 50px;
+  clear: both;
 }
 
-/* Show */
-.container-beach {
-  background-color: white;
-  border-radius: 15px;
-  width: 90%;
-  height: 400px;
-  display: flex;
-  margin: auto;
-  justify-content: space-between;
-}
 
-.container-review {
-  display: flex;
-  background-color: white;
-  width: 90%;
-  margin: auto;
-  padding: 16px;
-  border-bottom: 4px solid $light-gray;
-  border-radius: 5px;
+h2{
+	text-align: center;
+	font-weight: 700;
+	line-height: 2;
+	font-family: roboto;
+	margin: 0;
+
 }
