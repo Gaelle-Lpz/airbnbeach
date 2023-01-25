@@ -28,7 +28,7 @@
         <% if @beach.user != current_user %>
           <%= link_to "Reserve this Beach", new_beach_booking_path(@beach), class:"btn-reserve"%>
         <% else %>
-          <%= link_to "Delete the beach", beach_path(@beach), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          <%= link_to "Delete the beach", beach_path(@beach), class:"btn-reserve", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         <%end %>
       </div>
     </div>
