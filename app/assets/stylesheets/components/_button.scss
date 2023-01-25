@@ -79,6 +79,17 @@ display: block;
   color: white;
 }
 
+.trash-btn {
+  font-size: 36px;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  color: $orange;
+}
+
+.trash-btn:hover {
+  color: $red;
+
 .map-btn {
   position: fixed;
   bottom: 50px;
@@ -89,4 +100,5 @@ display: block;
 
 .map-btn:hover {
   width: 140px;
+
 }
