@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.beach = @beach
     @booking.user = current_user
+
     if @booking.save
       redirect_to my_bookings_path
     else
@@ -29,7 +30,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.destroy
     # No need for app/views/restaurants/destroy.html.erb
-    redirect_to beaches_my_bookings_path, status: :see_other
+    redirect_to my_bookings_path, status: :see_other
   end
 
   def my_bookings
