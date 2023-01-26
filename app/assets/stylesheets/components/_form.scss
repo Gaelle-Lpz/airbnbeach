@@ -97,3 +97,29 @@ font-weight: bold;
   font-weight: bold;
 
 }
+
+// css to add new review form page
+
+.container-form8 {
+ background-position: 0%;
+ background-image: url(https://images.pexels.com/photos/704623/pexels-photo-704623.jpeg);
+ background-repeat: no-repeat;
+ background-size: 100%;
+ height: 650px;
+ padding-top: 120px;
+
+ }
+
+ .container-form9 {
+
+	max-width: 330px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px 20px;
+	border-radius: 26px;
+	box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+	transition: .5s;
+  color: $yellow;
+  font-weight: bold;
+
+}
