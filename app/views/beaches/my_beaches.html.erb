@@ -1,28 +1,42 @@
-<div class="container">
+<div class ="container">
 
-  <div class="container-beaches row">
-    <% @beaches.each do |beach| %>
 
-    <div class="beach-card col-3 me-5">
-      <%= link_to beach_path(beach.id) do %>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="beach plage">
-        <div class="beach-card-body">
-          <%= link_to beach.name, beach_path(beach.id), class: "beach-card-title" %>
-          <div class="beach-card-location">
-            <%= beach.location %>
-          </div>
-          <div class="beach-card-rating">
-            <i class="fas fa-star"></i><%= sprintf('%.1f', beach.average_rating) %>
-          </div>
-          <div class="beach-card-price">
-            <%= sprintf('%.2f', beach.price)+"€ /day" %>
+      <% @beaches.each do |beach| %>
+
+        <div class="row mt-4">
+          <div class="beach-card me-5 col">
+            <%= link_to beach_path(beach.id) do %>
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" alt="beach plage">
+              <div class="beach-card-body">
+                <%= link_to beach.name, beach_path(beach.id), class: "beach-card-title" %>
+                <div class="beach-card-location">
+                  <%= beach.location %>
+                </div>
+                <div class="beach-card-rating">
+                  <i class="fas fa-star"></i><%= sprintf('%.1f', beach.average_rating) %>
+                </div>
+                <div class="beach-card-price">
+                  <%= sprintf('%.2f', beach.price)+"€ /day" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <div class="col booking-card mt-5 ">
+            <% if beach.bookings.length == 0 %>
+              <p>Your beach has not been reserved 😟</p>
+            <% else %>
+              <p class="mb-3"><%= "Your beach has been booked #{beach.bookings.length} times : " %></p>
+              <% beach.bookings.each do |booking| %>
+                <p>
+                <%= link_to "Booking Reference n° #{booking.id}", beach_booking_path(booking.beach, booking) %>
+                <p class="ms-3">Booking by : <%= booking.user.user_name %></p>
+                </p>
+              <% end %>
+            <% end %>
           </div>
         </div>
+
       <% end %>
-    </div>
-    <% end %>
-  </div>
-
-
 
 </div>
