@@ -3,18 +3,21 @@ class BeachesController < ApplicationController
   def index
     @beaches = Beach.all
 
-    @markers = @beaches.geocoded.map do |beach|
-      { lat: beach.latitude,
-        lng: beach.longitude
-
-      }
-    end
-
     if params[:query].present?
       @beaches = Beach.beach_search(params[:query])
     else
       @beaches = Beach.all
 
+    end
+  end
+
+  def card
+    @beaches = Beach.all
+    @markers = @beaches.geocoded.map do |beach|
+      { lat: beach.latitude,
+        lng: beach.longitude
+
+      }
     end
   end
 
