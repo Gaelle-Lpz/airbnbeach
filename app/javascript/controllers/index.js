@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import LocationAutocompleteController from "./location_autocomplete_controller"
+application.register("location-autocomplete", LocationAutocompleteController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 

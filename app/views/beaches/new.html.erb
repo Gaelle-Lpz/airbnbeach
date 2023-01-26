@@ -4,7 +4,10 @@
     <div class="title-new-beach">Add a new beach</div>
   <%= simple_form_for(@beach) do |f| %>
   <%= f.input :name %>
-  <%= f.input :location %>
+  <%= f.input :location,
+    input_html: {data: {location_autocomplete_target: "location"}, class: "d-none"},
+    wrapper_html: {data: {controller: "location-autocomplete", location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
+  %>
   <%= f.input :price %>
   <%= f.input :description %>
   <%= f.submit class: 'btn btn-flat' %>
