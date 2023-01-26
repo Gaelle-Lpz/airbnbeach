@@ -18,6 +18,9 @@ class BeachesController < ApplicationController
     end
   end
 
+  def card
+  end
+
   def show
     @reviews = @beach.reviews
     @my_beach_bookings = @beach.bookings
