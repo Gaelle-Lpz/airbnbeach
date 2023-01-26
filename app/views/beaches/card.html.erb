@@ -3,3 +3,7 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+
+<div>
+<%= link_to "Back to Beaches", beaches_path(@beaches), class:"btn-btn primary"%>
+</div>

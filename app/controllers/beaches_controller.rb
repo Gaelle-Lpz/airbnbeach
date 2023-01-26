@@ -7,7 +7,6 @@ class BeachesController < ApplicationController
       @beaches = Beach.beach_search(params[:query])
     else
       @beaches = Beach.all
-
     end
   end
 
@@ -15,8 +14,9 @@ class BeachesController < ApplicationController
     @beaches = Beach.all
     @markers = @beaches.geocoded.map do |beach|
       { lat: beach.latitude,
-        lng: beach.longitude
-
+        lng: beach.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {beach: beach}),
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
