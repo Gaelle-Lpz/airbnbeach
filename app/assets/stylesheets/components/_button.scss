@@ -105,15 +105,21 @@ display: block;
 }
 
 .btn-discover {
+  color: $blue;
+  border-width:1px;
+  border-style:dotted;
+  border-color:$blue;
+  background-color: $full-white;
+  font-weight: bold;
+  margin-left: -50px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: large;
+  text-align: center;
+  padding: 0 16px 0 16px;
+}
 
-   color: $blue;
-   border-width:1px;
-   border-style:dotted;
-   border-color:$blue;
-   background-color: $full-white;
-   font-weight: bold;
-   margin-left: -50px;
-   height: 40px;
-   border-radius: 4px;
-   font-size: large;
-  }
+.btn-discover:hover {
+  background-color: $blue;
+  color: $full-white;
+}

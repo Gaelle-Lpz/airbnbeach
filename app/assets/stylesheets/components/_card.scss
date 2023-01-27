@@ -70,12 +70,12 @@
 
 /* Beach Show Reviews */
 .comment-review {
-  margin-left: 76px;
   color: gray;
+  width: 75%;
 }
 
 .user-review {
-  width: 150px;
+  width: 25%;
 }
 
 /* Booking */
@@ -87,4 +87,17 @@
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   position: relative;
+}
+
+.no-booking {
+  background-color: white;
+  margin-top: 40px;
+  padding: 15px 15px 0 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.margin-body {
+  height: 40px;
 }
