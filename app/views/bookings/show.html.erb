@@ -1,11 +1,18 @@
-<h1>Show booking</h1>
-<div class="container-beaches row">
+<div class="container-form10">
+<section>
+<div class="container-form11">
+<h1>Booking</h1>
+<div class="container-booking-show-id row">
     <p>Booking Reference: <%= @booking.id %></p>
     <p>Beach: <%= @booking.beach.name %></p>
-    <p>Start Date</p>
+    <p>Start Date :</p>
     <%= @booking.start_date %>
-    <p>End Date</p>
+     <p></p>
+    <p>End Date :</p>
     <%= @booking.end_date %>
+    <p></p>
     <p>Total Price : <%= @booking.total_price%> €</p>
-     <%= link_to "Cancel", beach_booking_path(@booking), class: "btn btn-primary ms-3 me-3", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+     <%= link_to "Cancel", beach_booking_path(@booking), class: "btn-less", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
+</section>
 </div>
