@@ -42,3 +42,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.map-container {
+  width: 70%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
