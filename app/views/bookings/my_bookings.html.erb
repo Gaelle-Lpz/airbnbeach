@@ -1,5 +1,12 @@
 <div class ="container">
 
+  <div class="margin-body"></div>
+
+  <% if @bookings.length == 0 %>
+    <p class="no-booking">You have not reserved any beach 😟. Visit our catalog and get ready for a dream vacation </p>
+    <%= button_to "Discover", "beaches", method: :get, class: "btn-discover text-center" %>
+  <% end %>
+
   <div class="container-beaches mt-5">
     <% @bookings.each do |booking| %>
     <div class="container-booking mt-5 row">
