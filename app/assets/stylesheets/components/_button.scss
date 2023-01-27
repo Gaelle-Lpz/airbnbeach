@@ -123,3 +123,21 @@ display: block;
   background-color: $blue;
   color: $full-white;
 }
+
+// Button for the booking show selection //
+
+.btn-less {
+
+  color: $full-white;
+  border-width:1px;
+  background-color: $blue;
+  font-weight: bold;
+  height: 30px;
+  border-radius: 4px;
+  font-size: medium;
+  width: 80px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 3px;
+
+}
