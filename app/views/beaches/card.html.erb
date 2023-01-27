@@ -1,9 +1,16 @@
-<div class= "map"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+<div class="container">
+  <div class="margin-body"></div>
 
-<div>
-<%= link_to "Back to Beaches", beaches_path(@beaches), class:"btn-btn primary"%>
+  <div class="map-container">
+    <div class= "map"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+
+  <div >
+  <%= link_to "Back to Beaches list", beaches_path(@beaches), class:"position-absolute start-50 translate-middle-x btn btn-primary mt-4 mb-4"%>
+  </div>
+  <div class="margin-body"></div>
 </div>
