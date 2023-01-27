@@ -50,3 +50,21 @@ body {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 }
+
+/* container for show bookinh selection by id */
+
+.container-booking-show-id {
+
+  color: $dark-blue;
+  border-radius: 15px;
+  width: 90%;
+  height: 262px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  font-weight: 300;
+  table-layout: auto;
+  width: 260px;
+  border: 1px solid $yellow;
+
+  }
