@@ -104,7 +104,7 @@ font-weight: bold;
  background-position: 0%;
  background-image: url(https://images.pexels.com/photos/704623/pexels-photo-704623.jpeg);
  background-repeat: no-repeat;
- background-size: 100%;
+ background-size: cover;
  height: 650px;
  padding-top: 120px;
 
@@ -123,3 +123,32 @@ font-weight: bold;
   font-weight: bold;
 
 }
+
+// css for the booking show resume form page
+
+
+.container-form10 {
+  background-position: 0%;
+  background-image: url(https://images.unsplash.com/photo-1655753257542-afb503e1904f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  padding-top: 80px;
+
+  }
+
+  .container-form11 {
+
+   max-width: 330px;
+   position: relative;
+   margin: 0 auto;
+   padding: 40px 20px;
+   border-radius: 26px;
+   box-shadow: 1px 0 10px 15px rgba(0,0,0,.5);
+   transition: .5s;
+   color: $yellow;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-align: center;
+
+ }
