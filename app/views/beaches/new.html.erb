@@ -5,7 +5,7 @@
   <%= simple_form_for(@beach) do |f| %>
   <%= f.input :name %>
   <%= f.input :location,
-    input_html: {data: {location_autocomplete_target: "location"}, class: "d-none"},
+    input_html: {data: {location_autocomplete_target: "location"}, class: "d-none",:placeholder => "search"},
     wrapper_html: {data: {controller: "location-autocomplete", location_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}
   %>
   <%= f.input :price %>
