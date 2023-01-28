@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   get "my_bookings", to: "bookings#my_bookings"
   get "my_beaches", to: "beaches#my_beaches"
   get "card", to: "beaches#card"
+  get "change_status/:id", to: "bookings#change_status", as: "change_status"
 end

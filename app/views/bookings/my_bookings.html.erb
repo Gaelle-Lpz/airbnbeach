@@ -30,6 +30,7 @@
 
       <div class="booking-card col-sm">
         <p><%= link_to "Booking Reference n° #{booking.id}", beach_booking_path(booking.beach, booking) %></p>
+        <p>Status: <%= booking.status%></p>
         <p>Start Date : <%= booking.start_date %></p>
         <p>End Date : <%= booking.end_date %></p>
         <%= link_to beach_booking_path(booking.beach, booking), class: "trash-btn", data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this Booking ?"} do%>

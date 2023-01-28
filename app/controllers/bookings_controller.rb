@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: [:show, :destroy]
+  before_action :set_booking, only: [:show, :destroy, :change_status]
   before_action :set_beach, only: [:new, :create]
 
   def index
@@ -35,6 +35,12 @@ class BookingsController < ApplicationController
 
   def my_bookings
     @bookings = Booking.where(user: current_user)
+  end
+
+  def change_status
+    @booking.status = "confirmed"
+    @booking.save!
+    redirect_to beach_booking_path(@booking)
   end
 
   private
